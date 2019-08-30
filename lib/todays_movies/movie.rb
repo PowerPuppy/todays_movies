@@ -1,4 +1,4 @@
-Class TodaysMovies::Movie
+class TodaysMovies::Movie
 attr_accessor :title, :rating, :runtime, :genre, :showtimes
 
 

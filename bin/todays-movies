@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'lib'
+require_relative '../lib/todays_movies'
 
 TodaysMovies::CLI.new.call

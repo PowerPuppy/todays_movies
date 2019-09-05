@@ -2,10 +2,18 @@ class TodaysMovies::CLI
 
   def call
     puts "Todays Movies"
+    get_user_zip
     get_cinema_info
     get_movies
     menu
     goodbye
+  end
+
+  def get_user_zip
+    puts "Please enter your zip code."
+    zip = gets.downcase.chomp
+    new_scraper = TodaysMovies::Scraper.new(zip)
+
   end
 
   def get_cinema_info

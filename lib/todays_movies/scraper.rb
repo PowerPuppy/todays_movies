@@ -1,0 +1,4 @@
+class TodaysMovies::Scraper
+
+
+end

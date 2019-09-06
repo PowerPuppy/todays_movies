@@ -3,7 +3,6 @@ class TodaysMovies::CLI
   def call
     puts "Todays Movies"
     get_user_zip
-    get_cinema_info
     get_movies
     menu
     goodbye
@@ -13,14 +12,14 @@ class TodaysMovies::CLI
     puts "Please enter your zip code."
     zip = gets.downcase.chomp
     new_scraper = TodaysMovies::Scraper.new(zip)
-
+    new_scraper.get_cinema_info
   end
 
-  def get_cinema_info
-    puts "SHOWCASE SUPERLUX - CHESTNUT HILL"
-    puts"55 Boylston St., Chestnut Hill, MA 02467"
-    puts ""
-  end
+  # def get_cinema_info
+  #   puts "SHOWCASE SUPERLUX - CHESTNUT HILL"
+  #   puts"55 Boylston St., Chestnut Hill, MA 02467"
+  #   puts ""
+  # end
 
   def get_movies
     puts "1. ANGEL HAS FALLEN"
